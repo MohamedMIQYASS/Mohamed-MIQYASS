@@ -23,7 +23,7 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2em;
   font-style: italic;
-  color: white;
+  color: black;
 }
 
 /* STYLE DU PARAGRAPHE ET DE L'IMAGE */
@@ -55,17 +55,16 @@ body {
 }
 
 .carre {
-  width: 200px; /* largeur du carré */
-  height: 200px; /* hauteur du carré */
-  border-bottom: 2px solid green; /* contour gris clair */
+  width: 200px;
+  height: 200px;
+  border-bottom: 2px solid #36696d;
   border-right: 6px dotted deeppink;
   border-left: 3px dotted rebeccapurple;
-  border-top: 4px solid orange;
-  background-color: white; /* fond blanc */
-  display: flex; /* pour centrer le texte */
-  align-items: center; /* centrage vertical */
-  justify-content: center; /* centrage horizontal */
-  margin: 50px auto; /* centré dans la page */
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
   font-family: Arial, sans-serif;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* petite ombre comme sur ton image */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
