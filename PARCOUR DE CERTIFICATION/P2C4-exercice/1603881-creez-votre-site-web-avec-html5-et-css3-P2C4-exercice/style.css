@@ -42,6 +42,6 @@ li {
 }
 
 .divcss {
-  border-right: 1px #8e86b5;
-  border-bottom: 1px #8e86b5;
+  border-right: 1px #8e86b5 solid;
+  border-bottom: 1px #8e86b5 solid;
 }
