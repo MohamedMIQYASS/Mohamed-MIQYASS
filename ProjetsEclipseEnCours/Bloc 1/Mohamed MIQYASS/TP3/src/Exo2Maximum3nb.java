@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class Exo2Maximum3nb{ 
+	public static void main (String[] args){
+		// déclaration des 3 nombres entiers et d'une variable auxiliaire max
+		
+		int n1 , n2 , n3 , max;
+		
+		// saisie des nombres
+		Scanner sc = new Scanner(System.in);
+		System.out.print ("Entrez le premier nombre : ");
+		n1 = sc.nextInt();
+		System.out.print ("Entrez le second nombre : ");
+		n2 = sc.nextInt();
+		System.out.print ("Entrez le troisième nombre : ");
+		n3 = sc.nextInt();	
+		System.out.print("Le nombre le plus grand est: ");
+		// on compare les  nombres n1 et n2 et on met le plus grand dans max (2 cas à gérer)
+		if (n1 > n2) {
+			max = n1;
+		}
+		else {
+			max = n2;
+		}			
+		// on compare n3 et max et on met le plus grand dans max	( 1 cas cas à gérer)
+		if  (n3 > max) {
+			max = n3;
+		}
+	
+		// on affiche la valeur de max
+		System.out.println( max );
+		sc.close();
+		}
+}
+

@@ -1,0 +1,29 @@
+
+import java.util.Scanner;
+
+public class Population {
+
+	public static void main(String[] args) {
+		
+		// déclaration des variables
+		
+		int nbrFemmes;
+		int nbrHommes;
+		
+		// Initialisation des variables
+		
+		int popFrance = 65000000;
+		
+		// Calcul
+		
+		nbrFemmes =  (int)(popFrance * 0.55);
+		nbrHommes = popFrance - nbrFemmes;
+		
+		// Affichage du résultat
+		
+		System.out.println("Nombre d'hommes en France : " + nbrHommes);
+		System.out.println("Nombre de femmes en France : " + nbrFemmes);
+
+	}
+
+}

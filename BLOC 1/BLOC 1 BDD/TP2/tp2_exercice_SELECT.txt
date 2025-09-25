@@ -1,0 +1,101 @@
+-- drop database gourmand; -- Suppression de la base gourmand
+create database gourmand_MIQYASS;  -- Creation de la base gourmand
+use gourmand_MIQYASS;              -- Déclaration : nous utilisons la base gourmand, cela évite de le repréciser à chaque instruction
+
+-- drop table client;
+create table client
+     (
+     code_c          integer primary key,  /* l'identifiant */
+     nom             varchar(35) not null,
+     adresse         varchar(50),
+     cp              char(5),
+     ville           varchar(25),
+     telephone       varchar(16)
+     );
+    
+
+
+insert into client (code_c,nom,adresse,cp,ville,telephone) values (45 , 'TARINAUX Lucien' , '12 rue de la Justice' , '51100' , 'REIMS' , '03.26.25.48.87');
+insert into client (code_c,nom,adresse,cp,ville,telephone) values (46 , 'MARTUSE' , '103 avenue Lear' , '51100' , 'REIMS' , '03.26.03.25.26');
+insert into client (code_c,nom,adresse,cp,ville,telephone) values (47 , 'RABIN Sandrine' , '21 rue de la Méditerranée' , '51100' , 'REIMS' , '03.26.14.15.25');
+insert into client (code_c,nom,adresse,cp,ville,telephone) values (48 , 'SILLARD Laurence' , '15 rue Pasentiers' , '51100' , 'REIMS' , '03.26.11.11.25');
+insert into client (code_c,nom,adresse,cp,ville,telephone) values (49 , 'COTOY Sylvie' , '12 rue des Aduou' , '51100' , 'REIMS' , '03.26.10.25.75');
+insert into client (code_c,nom,adresse,cp,ville,telephone) values (50 , 'HELLOU Bernard' , '21 rue de la Méditerranée' , '51100' , 'REIMS' , '03.26.12.25.42');
+insert into client (code_c,nom,adresse,cp,ville,telephone) values (51 , 'HENTION Martine' , '50 allée des bons enfants' , '51100' , 'REIMS' , '03.26.12.25.86');
+insert into client (code_c,nom,adresse,cp,ville,telephone) values (52 , 'SIBAT Evelyne' , '14 rue de la Baltique' , '51100' , 'REIMS' , '03.26.12.23.33');
+insert into client (code_c,nom,adresse,cp,ville,telephone) values (53 , 'MARIN Dominique' , '24 rue de la Baltique' , '51100' , 'REIMS' , '03.26.10.10.23');
+insert into client (code_c,nom,adresse,cp,ville,telephone) values (54 , 'DURDUX Monique' , '15 allée des Béarnais' , '51150' , 'VITRY LE FRANCOIS' , '03.26.42.42.33');
+insert into client (code_c,nom,adresse,cp,ville,telephone) values (55 , 'CANILLE Walter' , '14 rue Lanterneau' , '51100' , 'REIMS' , '03.26.12.12.87');
+insert into client (code_c,nom,adresse,cp,ville,telephone) values (56 , 'BOUQUET Antoinette' , '1 rue de la Méditerranée' , '51140' , 'ROMAIN' , '03.26.78.89.54');
+insert into client (code_c,nom,adresse,cp,ville,telephone) values (57 , 'GAUTON Nadine' , '5 place des Oiseaux' , '51200' , 'FISMES' , '03.26.53.56.55');
+insert into client (code_c,nom,adresse,cp,ville,telephone) values (58 , 'LEGROS Christian' , '18 place des Oiseaux' , '51200' , 'FISMES' , '03.26.44.55.66');
+insert into client (code_c,nom,adresse,cp,ville,telephone) values (59 , 'DUMOITIERS Lucille' , '12 place Centrale' , '02320' , 'LONGUEVAL' , '03.26.86.43.25');
+insert into client (code_c,nom,adresse,cp,ville,telephone) values (60 , 'BOUCHE Carole' , '4 rue Bruleau' , '51200' , 'FISMES' , '03.26.33.96.85');
+
+insert into client (code_c,nom,adresse,cp,ville,telephone) values (61 , 'TARINAX Lucie' , '89 rue des abeilles' , '51100' , 'REIMS' );
+
+
+/*****************************************************/
+/******** Exercice 1 *********************************/
+/******** Lancer les requêtes suivantes **************/
+/*****************************************************/
+
+-a- select * from client; -- que se passe t-il ?
+
+--> Cela me renvoie toutes les lignes de la tables CLIENT 
+
+-b- select code_c, nom from client; -- que se passe t-il ?
+
+--> Cela me renvoie le code et le nom de chaque client  
+
+-c- select adresse from client where adresse like '12%'; -- que se passe t-il ?
+
+--> Cela me renvoie les adresses de la table CLIENT qui contiennent le numéro 12
+
+-d- select distinct ville from client; -- que se passe t-il ? 
+
+--> Cela me renvoie les différentes villes des clients ( sans doublons ) 
+
+-e- select code_c, nom from client order by nom; -- que se passe t-il ?
+
+--> Cela me renvoie le code et le nom du client dans l'ordre alphabétique des noms de famille 
+
+-f- select code_c, nom from client order by nom desc; -- que se passe t-il ?
+
+--> idem mais dans le sens inverse 
+
+-g- select nom from client where code_c in (46,47,48); -- que se passe t-il ?
+
+--> Cela me renvoies les noms des clients qui ont un code compris dans cette liste de valeurs 
+
+-h- select nom from client where code_c not in (46,47,48) and ville = 'REIMS'; -- que se passe t-il ?
+
+--> Cela me renvoie les noms des clients qui ont un code différents de ceux présents dans la liste de valeurs et qui sont originaires de la ville de REIMS 
+
+
+
+/*****************************************************/
+/******** Exercice 2 *********************************/
+/******** Lancer les requêtes suivantes **************/
+/*****************************************************/
+
+-- a -- Ecrire la requete permettant de lister les codes postaux distinct de la table client.
+
+--> select distinct cp from CLIENT;
+
+-- b -- Ecrire le nom des clients dont les noms commencent par les lettres 'DU'
+
+--> select nom from client where nom like 'DU%';
+
+-- c -- Ecrire la requete permettant de lister toutes les informations des clients habitant à FISMES
+
+--> select * from CLIENT where ville = 'FISMES';
+
+-- d -- Ecrire la requete permettant de lister toutes les informations des clients n'habitant pas REIMS
+
+--> select * from CLIENT where ville != 'FISMES';
+
+-- e -- Ecrire la requete permettant de lister toutes les informations des clients habitant à REIMS et dont le code (code_c )est supérieur à 50
+
+--> select * from CLIENT where ville = 'FISMES' and code_c > 50;
+

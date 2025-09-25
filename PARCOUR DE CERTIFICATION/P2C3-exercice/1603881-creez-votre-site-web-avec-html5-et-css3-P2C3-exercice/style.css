@@ -1,0 +1,49 @@
+body {
+  /* Ici on utilise le sélecteur body pour appliquer une police et une taille par défaut pour les éléments */
+  font-family: "Manrope", sans-serif;
+  font-size: 1em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+em {
+  color: #a5b4fc;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 3.5em;
+  color: #a5b4fc;
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+.div {
+  background-color: white;
+}
+
+main {
+  background-color: #1f2039;
+}
+
+a {
+  color: #242424;
+}
+
+p,
+ul,
+h2 {
+  background-color: #f9f8ff;
+}
+
+.hypertexte {
+  background: linear-gradient(#8e86b5, #acaeed);
+  font-family: "Manrope", sans-serif;
+  color: white;
+}

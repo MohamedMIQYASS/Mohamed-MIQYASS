@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "MontSerrat";
+  src: url(montserrat/Montserrat-Black.ttf);
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url(manrope/manrope-bold.otf);
+}
+
+a {
+  color: black;
+}
+
+.important {
+  color: #a5b4fc;
+}
+
+h1 {
+  font-size: 3.5em;
+  color: darkviolet;
+  font-family: "MontSerrat";
+}
+
+p {
+  font-size: 1.1em;
+  font-family: "Manrope";
+}
+
+ul {
+  font-size: 1em;
+  font-family: "Manrope";
+}
+
+a {
+  text-decoration-style: none;
+  font-size: 1em;
+  font-family: "Manrope";
+}

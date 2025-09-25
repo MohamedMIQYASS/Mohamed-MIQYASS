@@ -1,0 +1,100 @@
+-- CREATION DES TABLES 
+
+CREATE TABLE EQUIPES (
+    CodeEquipe INT,
+    NomEquipe VARCHAR(255),
+    DirecteurSportif VARCHAR(255),
+    PRIMARY KEY(CodeEquipe)
+);
+
+CREATE TABLE PAYS (
+    CodePays INT,
+    NomPays VARCHAR(255),
+    PRIMARY KEY(CodePays)
+);
+
+CREATE TABLE COUREURS (
+    numeroCoureur INT,
+    NomCoureur VARCHAR(255),
+    CodeEquipe INT,
+    CodePays INT,
+    PRIMARY KEY(numeroCoureur)
+);
+
+CREATE TABLE ETAPES (
+    numeroEtape INT,
+    VilleDepart VARCHAR(255),
+    VilleArrivee VARCHAR(255),
+    NbKM INT,
+    PRIMARY KEY(numeroEtape)
+);
+
+CREATE TABLE TEMPS  (
+    numeroCoureur INT,
+    numeroEtape INT,
+    TempsRealise VARCHAR(255),
+    PRIMARY KEY(numeroCoureur, numeroEtape)
+);
+
+-- CREATION DES CLES ETRANGERES
+
+ALTER TABLE COUREURS ADD FOREIGN KEY (CodeEquipe) REFERENCES EQUIPES (CodeEquipe);
+ALTER TABLE COUREURS ADD FOREIGN KEY (CodePays) REFERENCES PAYS (CodePays);
+ALTER TABLE TEMPS ADD FOREIGN KEY (numeroCoureur) REFERENCES COUREURS (numeroCoureur);
+ALTER TABLE TEMPS ADD FOREIGN KEY (numeroEtape) REFERENCES ETAPES (numeroEtape);
+
+-- INSERTIONS 
+
+INSERT INTO EQUIPES VALUES (1, 'Real marathon', 'Ancelloti');
+INSERT INTO PAYS VALUES (1, 'Belgique');
+INSERT INTO COUREURS VALUES (1, 'Marchand', 1, 1);
+INSERT INTO ETAPES VALUES (1, 'Avignon', 'Dijon', 89);
+INSERT INTO TEMPS VALUES (1, 1, '38m , 78s');
+
+-- EQUIPES
+INSERT INTO EQUIPES VALUES (2, 'Team Sky', 'Dave Brailsford');
+INSERT INTO EQUIPES VALUES (3, 'Movistar', 'Unzue Eusebio');
+INSERT INTO EQUIPES VALUES (4, 'Jumbo-Visma', 'Richard Plugge');
+
+-- PAYS
+INSERT INTO PAYS VALUES (2, 'France');
+INSERT INTO PAYS VALUES (3, 'Espagne');
+INSERT INTO PAYS VALUES (4, 'Italie');
+INSERT INTO PAYS VALUES (5, 'Pays-Bas');
+
+-- COUREURS
+INSERT INTO COUREURS VALUES (2, 'Dupont', 2, 2);   -- Français dans Team Sky
+INSERT INTO COUREURS VALUES (3, 'Garcia', 3, 3);   -- Espagnol chez Movistar
+INSERT INTO COUREURS VALUES (4, 'Rossi', 3, 4);    -- Italien chez Movistar
+INSERT INTO COUREURS VALUES (5, 'Van Dijk', 4, 5); -- Hollandais chez Jumbo
+INSERT INTO COUREURS VALUES (6, 'Bernal', 2, 1);   -- Belge dans Team Sky
+
+-- ETAPES
+INSERT INTO ETAPES VALUES (2, 'Lyon', 'Grenoble', 120);
+INSERT INTO ETAPES VALUES (3, 'Grenoble', 'Chambéry', 150);
+INSERT INTO ETAPES VALUES (4, 'Chambéry', 'Annecy', 95);
+
+-- TEMPS (on ajoute des résultats fictifs)
+INSERT INTO TEMPS VALUES (2, 1, '39m 10s');
+INSERT INTO TEMPS VALUES (3, 1, '40m 22s');
+INSERT INTO TEMPS VALUES (4, 1, '42m 05s');
+INSERT INTO TEMPS VALUES (5, 1, '38m 50s');
+INSERT INTO TEMPS VALUES (6, 1, '39m 45s');
+
+INSERT INTO TEMPS VALUES (2, 2, '3h 45m');
+INSERT INTO TEMPS VALUES (3, 2, '3h 50m');
+INSERT INTO TEMPS VALUES (4, 2, '3h 42m');
+INSERT INTO TEMPS VALUES (5, 2, '3h 55m');
+INSERT INTO TEMPS VALUES (6, 2, '3h 48m');
+
+INSERT INTO TEMPS VALUES (2, 3, '4h 05m');
+INSERT INTO TEMPS VALUES (3, 3, '4h 00m');
+INSERT INTO TEMPS VALUES (4, 3, '4h 10m');
+INSERT INTO TEMPS VALUES (5, 3, '4h 08m');
+INSERT INTO TEMPS VALUES (6, 3, '4h 12m');
+
+INSERT INTO TEMPS VALUES (2, 4, '2h 20m');
+INSERT INTO TEMPS VALUES (3, 4, '2h 18m');
+INSERT INTO TEMPS VALUES (4, 4, '2h 22m');
+INSERT INTO TEMPS VALUES (5, 4, '2h 25m');
+INSERT INTO TEMPS VALUES (6, 4, '2h 21m');

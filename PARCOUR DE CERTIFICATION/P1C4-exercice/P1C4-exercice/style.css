@@ -1,0 +1,71 @@
+/* IMPORTATION DU FONT */
+
+@font-face {
+  font-family: "font-titre";
+  src: url("game_of_squids/Game\ Of\ Squids.ttf");
+}
+
+/* COULEUR DE LA CLASSE */
+
+.ma-classe {
+  color: black;
+}
+
+.ma-classe2 {
+  color: deeppink;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* STYLE DU PARAGRAPHE */
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  font-style: italic;
+  color: white;
+}
+
+/* STYLE DU PARAGRAPHE ET DE L'IMAGE */
+
+p > img {
+  width: 50%;
+  height: auto;
+}
+
+/* STYLE DU TITRE */
+
+h1 {
+  font-family: "font-titre", sans-serif;
+  font-size: 5em;
+  text-align: center;
+  color: white;
+  padding: 150px;
+  background: linear-gradient(to right, #000000, #434343);
+}
+
+h2 {
+  font-size: 2.5em;
+  font-family: "font-titre";
+  color: blueviolet;
+}
+
+body {
+  background-color: #e4e7f0;
+}
+
+.carre {
+  width: 200px; /* largeur du carré */
+  height: 200px; /* hauteur du carré */
+  border-bottom: 2px solid green; /* contour gris clair */
+  border-right: 6px dotted deeppink;
+  border-left: 3px dotted rebeccapurple;
+  border-top: 4px solid orange;
+  background-color: white; /* fond blanc */
+  display: flex; /* pour centrer le texte */
+  align-items: center; /* centrage vertical */
+  justify-content: center; /* centrage horizontal */
+  margin: 50px auto; /* centré dans la page */
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* petite ombre comme sur ton image */
+}
