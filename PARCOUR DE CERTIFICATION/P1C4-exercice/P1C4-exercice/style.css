@@ -42,6 +42,7 @@ h1 {
   color: white;
   padding: 150px;
   background: linear-gradient(to right, #000000, #434343);
+  text-shadow: 6px 6px 0px #aebbd1;
 }
 
 h2 {
