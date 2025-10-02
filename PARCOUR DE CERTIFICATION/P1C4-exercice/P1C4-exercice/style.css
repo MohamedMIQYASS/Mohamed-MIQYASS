@@ -8,7 +8,7 @@
 /* COULEUR DE LA CLASSE */
 
 .ma-classe {
-  color: black;
+  color: white;
 }
 
 .ma-classe2 {
@@ -23,12 +23,17 @@ p {
   font-family: "RoseMartin", sans-serif;
   font-size: 2em;
   font-style: italic;
-  color: black;
+  color: white;
 }
 
 /* STYLE DU PARAGRAPHE ET DE L'IMAGE */
 
 p > img {
+  width: 30%;
+  height: auto;
+}
+
+img {
   width: 50%;
   height: auto;
 }
@@ -52,7 +57,7 @@ h2 {
 }
 
 body {
-  background-color: white;
+  background: linear-gradient(to right, #020024, #420707, #b51b00);
 }
 
 .carre {
