@@ -37,10 +37,10 @@ p > img {
 
 h1 {
   font-family: "font-titre", sans-serif;
-  font-size: 5em;
+  font-size: 3em;
   text-align: center;
   color: white;
-  padding: 150px;
+  padding: 30px;
   background: linear-gradient(to right, #000000, #434343);
   text-shadow: 6px 6px 0px #aebbd1;
 }
@@ -67,4 +67,21 @@ body {
   justify-content: center;
   margin: 50px auto;
   font-family: Arial, sans-serif;
+}
+
+img:hover {
+  opacity: 0.5;
+}
+
+a:active {
+  text-decoration-color: #1d313f;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  text-decoration: underline;
+}
+
+a:focus {
+  background-color: #1d313f;
+  color: white;
+  outline-color: deeppink;
 }
