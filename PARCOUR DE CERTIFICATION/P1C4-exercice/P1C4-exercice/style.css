@@ -1,8 +1,8 @@
 /* IMPORTATION DU FONT */
 
 @font-face {
-  font-family: "font-titre";
-  src: url("game_of_squids/Game\ Of\ Squids.ttf");
+  font-family: "RoseMartin";
+  src: url("rosemartin/Rosemartin.otf");
 }
 
 /* COULEUR DE LA CLASSE */
@@ -12,7 +12,7 @@
 }
 
 .ma-classe2 {
-  color: deeppink;
+  color: red;
   font-weight: 700;
   text-decoration: underline;
 }
@@ -20,7 +20,7 @@
 /* STYLE DU PARAGRAPHE */
 
 p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "RoseMartin", sans-serif;
   font-size: 2em;
   font-style: italic;
   color: black;
@@ -36,23 +36,23 @@ p > img {
 /* STYLE DU TITRE */
 
 h1 {
-  font-family: "font-titre", sans-serif;
+  font-family: "RoseMartin", sans-serif;
   font-size: 3em;
   text-align: center;
   color: white;
   padding: 30px;
   background: linear-gradient(to right, #000000, #434343);
-  text-shadow: 6px 6px 0px #aebbd1;
+  text-shadow: 3px 3px 0px black;
 }
 
 h2 {
   font-size: 2.5em;
-  font-family: "font-titre";
+  font-family: "RoseMartin";
   color: blueviolet;
 }
 
 body {
-  background-color: #e4e7f0;
+  background-color: white;
 }
 
 .carre {
@@ -84,4 +84,8 @@ a:focus {
   background-color: #1d313f;
   color: white;
   outline-color: deeppink;
+}
+
+img:hover + h2 {
+  color: deeppink;
 }
