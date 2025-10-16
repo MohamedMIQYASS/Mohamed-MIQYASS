@@ -166,10 +166,13 @@ a:focus {
 }
 
 .one {
+  order: 3;
 }
 
 .two {
+  order: 1;
 }
 
 .three {
+  order: 2;
 }
