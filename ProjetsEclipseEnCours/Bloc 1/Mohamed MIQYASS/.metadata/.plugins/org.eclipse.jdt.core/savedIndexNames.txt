@@ -1,5 +1,0 @@
-INDEX VERSION 1.134+X:\_public\Mohamed MIQYASS\ProjetsEclipseEnCours\Bloc 1\Mohamed MIQYASS\.metadata\.plugins\org.eclipse.jdt.core
-272769533.index
-3703238408.index
-1865797976.index
-3108431294.index
