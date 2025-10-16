@@ -111,7 +111,7 @@ nav > a:hover {
 
 .conteneur {
   display: grid;
-  grid-template-columns: 250px 250px 250px 250px 250px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 150px 300px;
   flex-direction: row;
   justify-content: space-between;
