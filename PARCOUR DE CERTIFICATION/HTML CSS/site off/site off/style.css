@@ -1,14 +1,47 @@
-/* IMPORTATION DU FONT */
-
 @font-face {
   font-family: "RoseMartin";
-  src: url("rosemartin/Rosemartin.otf");
+  src: url("rosemartin/Rosemartin.otf") format("opentype");
 }
 
-/* COULEUR DE LA CLASSE */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "RoseMartin", sans-serif;
+  font-size: 3em;
+  text-align: center;
+  color: gold;
+  padding: 40px 10px;
+  text-shadow: 3px 3px 0px black;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-family: "RoseMartin", sans-serif;
+  color: blueviolet;
+  text-align: center;
+}
+
+p {
+  font-family: "RoseMartin", sans-serif;
+  font-size: 1.5em;
+  font-style: italic;
+  color: black;
+  margin: 20px;
+  padding: 10px;
+  line-height: 1.5;
+}
 
 .ma-classe {
-  color: white;
+  color: black;
 }
 
 .ma-classe2 {
@@ -17,49 +50,76 @@
   text-decoration: underline;
 }
 
-/* STYLE DU PARAGRAPHE */
-
-p {
-  font-family: "RoseMartin", sans-serif;
-  font-size: 2em;
-  font-style: italic;
-  color: white;
+img {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  transition: opacity 0.3s ease;
 }
-
-/* STYLE DU PARAGRAPHE ET DE L'IMAGE */
 
 p > img {
   width: 30%;
   height: auto;
 }
 
-img {
-  width: 50%;
+img:hover {
+  opacity: 0.5;
+}
+
+img:hover + h2 {
+  color: deeppink;
+}
+
+video {
+  width: 100%;
+  max-width: 800px;
   height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
 }
 
-/* STYLE DU TITRE */
+.banner {
+  background: url("hawk.jpg") no-repeat center/cover;
+  padding: 100px 0;
+  width: 100%;
+  min-height: 200px;
+}
 
-h1 {
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #f0f0f0;
+  padding: 10px 0;
+}
+
+nav > a {
   font-family: "RoseMartin", sans-serif;
-  font-size: 3em;
-  text-align: center;
-  color: white;
-  padding: 30px;
-  background: linear-gradient(to right, #000000, #434343);
-  text-shadow: 3px 3px 0px black;
+  font-size: 1.5em;
+  font-style: italic;
+  color: black;
+  text-decoration: none;
+  margin: 0 20px;
+  transition: color 0.3s ease;
 }
 
-h2 {
-  font-size: 2.5em;
-  font-family: "RoseMartin";
+nav > a:hover {
   color: blueviolet;
+  text-decoration: underline;
 }
 
-body {
-  background: linear-gradient(to right, #020024, #420707, #b51b00);
+.conteneur {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 200px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
+.conteneur > .box,
 .carre {
   width: 200px;
   height: 200px;
@@ -70,45 +130,46 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 50px auto;
   font-family: Arial, sans-serif;
+  text-align: center;
 }
 
-img:hover {
-  opacity: 0.5;
+.lien {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f8f8f8;
+}
+
+.lien > a {
+  font-family: "RoseMartin", sans-serif;
+  font-size: 1.5em;
+  font-style: italic;
+  color: black;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.lien > a:hover {
+  color: blueviolet;
 }
 
 a:active {
   text-decoration-color: #1d313f;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2em;
   text-decoration: underline;
 }
 
 a:focus {
   background-color: #1d313f;
   color: white;
-  outline-color: deeppink;
+  outline: 2px solid deeppink;
 }
 
-img:hover + h2 {
-  color: deeppink;
+.one {
 }
 
-.lien > a {
-  font-family: "RoseMartin", sans-serif;
-  font-size: 2em;
-  font-style: italic;
-  color: white;
-  text-decoration: none;
-  margin-right: 20px;
+.two {
 }
 
-nav > a {
-  font-family: "RoseMartin", sans-serif;
-  font-size: 2em;
-  font-style: italic;
-  color: white;
-  text-decoration: none;
-  margin-right: 520px;
+.three {
 }
