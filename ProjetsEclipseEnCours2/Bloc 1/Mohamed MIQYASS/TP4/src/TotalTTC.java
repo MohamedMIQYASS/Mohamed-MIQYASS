@@ -14,7 +14,6 @@ public class TotalTTC{
 		// saisie du prix de l'article et de la quantité souhaitée
 		Scanner sc = new Scanner(System.in);
 		
-		
 		do {
 		System.out.print ("Entrez le prix HT de l'article en euros : ");
 		prixHT = sc.nextFloat();
@@ -22,10 +21,7 @@ public class TotalTTC{
 		qte =sc.nextInt();
 		System.out.println("Souhaitez vous enregistrer un autre article ? (true/false)");
 		rep_user = sc.nextBoolean();
-		
-		
 		} while(rep_user == true);
-		
 		
 		//calcul du total HT
 				totalHT = prixHT * qte;
@@ -52,42 +48,5 @@ public class TotalTTC{
 				System.out.printf ("Total à payer : %5.2f €. \n",totalTTC);
 				
 				sc.close();
-		
-		
-		
-		
-		
-		
-	
-
-
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		}	
 }

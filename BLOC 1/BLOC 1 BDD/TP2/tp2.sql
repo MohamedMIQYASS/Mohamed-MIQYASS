@@ -25,7 +25,7 @@ CREATE TABLE ETAPES (
     numeroEtape INT,
     VilleDepart VARCHAR(255),
     VilleArrivee VARCHAR(255),
-    NbKM INT,
+    NbKM INT,+
     PRIMARY KEY(numeroEtape)
 );
 
